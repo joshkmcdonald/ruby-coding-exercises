@@ -1,6 +1,13 @@
+#done!!!!
+
 require 'rspec'
 
 def title_builder headers, data
+  h = Hash.new
+  headers.size.times do |x|
+    h["#{headers[x]}"] = data[x]
+  end
+  p h
 end
 
 describe 'Hash builder' do
@@ -12,4 +19,5 @@ describe 'Hash builder' do
                                               "rating"=>5})
   end
 end
+
 
