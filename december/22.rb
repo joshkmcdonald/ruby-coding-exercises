@@ -37,6 +37,11 @@ rangers = [
 ]
 
 def position_filter(headers, *data)
+  new_array = []
+
+  headers.length.times do |x|
+    
+  end
 end
 
 describe 'Position Filter' do
@@ -46,3 +51,7 @@ describe 'Position Filter' do
     expect(position_filter(test_headers, test_team).first).to eq(['1B', 'First Base Player'])
   end
 end
+
+
+
+
