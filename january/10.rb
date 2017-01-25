@@ -1,6 +1,8 @@
+#done
 require 'rspec'
 
 def sum_generator num
+  (1..num).sum
 end
 
 describe 'Dynamic sum' do
@@ -8,3 +10,4 @@ describe 'Dynamic sum' do
     expect(sum_generator 10).to eq(55)
   end
 end
+

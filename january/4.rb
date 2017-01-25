@@ -1,6 +1,17 @@
+#done
 require 'rspec'
 
+module RubyContent
+  refine String do
+    def commentize
+    "# #{self}"
+    end
+  end
+end
+
 class ContentController
+  using RubyContent
+  
   def initialize(word)
     @word = word
   end
@@ -8,6 +19,7 @@ class ContentController
   def hidden_content
     @word.commentize
   end
+
 end
 
 describe 'Refining Strings for a specific module' do
@@ -17,3 +29,5 @@ describe 'Refining Strings for a specific module' do
   end
 end
 
+cc = ContentController.new("My String")
+p cc.hidden_content

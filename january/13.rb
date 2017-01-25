@@ -1,6 +1,21 @@
+# done
 require 'rspec'
 
 def hashed_fizz_buzz num
+  h = {}
+
+  (1..num).each do |x|
+    if (x % 3 == 0) && (x % 5 == 0)
+      h[x] = "FizzBuzz"
+    elsif x % 3 == 0
+      h[x] = "Fizz"
+    elsif x % 5 == 0
+      h[x] = "Buzz"
+    else
+      h[x] = x
+    end
+  end
+  h
 end
 
 describe 'Hashed FizzBuzz' do

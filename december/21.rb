@@ -2,9 +2,7 @@
 require 'rspec'
 
 def sentence_reverser str
-  arr = str.split
-  arr.reverse!
-  return arr.join(' ')
+  str.split.reverse.join(' ')
 end
 
 
