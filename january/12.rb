@@ -1,6 +1,14 @@
+# done
 require 'rspec'
 
 def pseudo_random num
+  srand 1
+
+  fiber = Fiber.new do
+    num.times do
+      Fiber.yield rand 100
+    end  
+  end
 end
 
 describe 'Psudeo random number generator' do

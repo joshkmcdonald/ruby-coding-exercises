@@ -1,3 +1,4 @@
+#done
 require 'rspec'
 
 # ¥
@@ -5,6 +6,14 @@ require 'rspec'
 # $
 
 def currency_converter amount, location
+  case location
+  when 'US'
+    "$#{amount}.00"
+  when 'Japan'
+    "¥#{amount}"
+  when 'UK'
+    "£#{amount},00"
+  end
 end
 
 describe 'Currency converter' do

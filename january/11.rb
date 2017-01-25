@@ -1,7 +1,9 @@
+#done
 require 'rspec'
 
 class Array
   def odd_selector
+    self.select { |num| num.odd? }
   end
 end
 

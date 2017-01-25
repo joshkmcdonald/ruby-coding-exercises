@@ -1,4 +1,4 @@
-#done!!!!
+#done
 
 require 'rspec'
 
@@ -19,5 +19,3 @@ describe 'Hash builder' do
                                               "rating"=>5})
   end
 end
-
-

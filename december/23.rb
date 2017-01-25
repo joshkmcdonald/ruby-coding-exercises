@@ -1,6 +1,9 @@
+# done
 require 'rspec'
 
 def random_numbers
+  # 20.times.map{ rand(1..999)}
+  Array.new(20) { rand 1000 }
 end
 
 describe 'Random number collection generator' do
@@ -13,3 +16,5 @@ describe 'Random number collection generator' do
     expect(random_set_one).to_not eq(random_set_two)
   end
 end
+
+p random_numbers

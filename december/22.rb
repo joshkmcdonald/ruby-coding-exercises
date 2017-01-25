@@ -1,3 +1,4 @@
+#done
 require 'rspec'
 
 headers = [
@@ -37,11 +38,7 @@ rangers = [
 ]
 
 def position_filter(headers, *data)
-  new_array = []
-
-  headers.length.times do |x|
-    
-  end
+  headers.zip(*data)
 end
 
 describe 'Position Filter' do
@@ -52,6 +49,9 @@ describe 'Position Filter' do
   end
 end
 
+test_headers = ['1B', '2B', 'P']
+test_team = ['First Base Player', 'Second Base Player', 'Pitcher']
 
+p position_filter(test_headers, test_team)
 
 
