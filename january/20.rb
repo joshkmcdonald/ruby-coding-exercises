@@ -1,4 +1,18 @@
+# done
 require 'rspec'
+
+class Array
+  def value_included? str
+    swap = false
+
+    self.each do |x|
+      swap = true
+      break if x.value?(str)
+      swap = false 
+    end
+    swap
+  end
+end
 
 describe 'Collection search' do
   it 'checks to see if a value is included in any number of hashes nested inside an array' do
