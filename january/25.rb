@@ -1,4 +1,11 @@
+# done
 require 'rspec'
+
+def lineup_generator(players)
+  players.map.with_index(1) do |x,y|
+    yield(y,x)
+  end
+end
 
 describe 'Lineup Generator' do
   before do
