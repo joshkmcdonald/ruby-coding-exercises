@@ -3,22 +3,15 @@ require 'rspec'
 
 class String
   def total_words
-    self.gsub(/-|\/|\./, '').split.length
+    # self.gsub(/-|\/|\./, '').split.length
+    scan(/\w+/).count
   end
     
   def word_list
-    @h = {}
-    arr =  self.gsub(/-|\/|\./, '').split
-
-    arr.length.times do |x|
-      if @h.has_key?(arr[x])
-        @h[arr[x]] += 1
-      else
-        @h.store(arr[x], 1) 
-      end
-    end
-    @h
-  end
+    list = Hash.new(0)
+    downcase.scan(/\w+/) { |w| list[w] += 1}
+    list
+  end  
 end
 
 describe 'Word Reporter' do
