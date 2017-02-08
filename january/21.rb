@@ -1,6 +1,18 @@
+# done
 require 'rspec'
 
 def multiplication_table num
+  hash = {}
+
+  (1..num).each do |x|
+    arr = []
+    (1..10).each do |y|
+      arr << x*y
+    end
+    hash[x] = arr
+  end
+
+  hash
 end
 
 describe 'Multiplication table' do
