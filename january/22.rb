@@ -1,4 +1,31 @@
+#done
 require 'rspec'
+
+module Tippy
+  class Builder
+    def initialize total:, gratuity:
+      @total = total
+      @gratuity = gratuity
+    end
+
+    def generate
+      if (@gratuity.is_a? Numeric) 
+        @total += @total * @gratuity.to_f/100.00 
+      else
+        @gratuity.downcase!
+        case @gratuity
+        when 'high'     then @total += @total * (25.0/ 100)
+        when 'standard' then @total += @total * (18.0/ 100)
+        when 'low'      then @total += @total * (15.0/ 100)
+        else
+          @total += @total * @gratuity.to_f/100.00 
+        end
+      end
+      @total
+    end
+  end
+end
+
 
 describe 'Tip Generator' do
   it 'Accurately generates a tip given string or integer input' do
@@ -18,6 +45,5 @@ describe 'Tip Generator' do
     expect(test_6).to eq(120.0)
     expect(test_7).to eq(100.0)
   end
-
 end
 
