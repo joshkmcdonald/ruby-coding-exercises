@@ -1,5 +1,27 @@
 require 'rspec'
 
+
+# done
+require 'rspec'
+
+def image_tag path, width: nil, alt: nil, random_value: nil
+  path = "<img src='#{path}'"
+  p_hash = {
+    " width=" => "'#{width}'",
+    " alt=" => "'#{alt}'", 
+    " random_value=" => "'#{random_value}'"
+  }
+
+  p_hash.each do |x,y|
+    if y != "''"
+      path << x
+      path << y
+    end
+  end
+  path << ">"
+end
+
+
 describe 'Cloned image_tag' do
   before do
     @image_path = "https://devcamp.com/some_pic.jpg"

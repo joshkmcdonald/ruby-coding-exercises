@@ -1,7 +1,12 @@
+# done
+
 require 'rspec'
 require 'date'
 
 def day_counter
+
+  (Date.new(2016,12,25) - Date.new(2004,7,1)).to_i
+
 end
 
 describe 'Day counter' do
@@ -9,4 +14,3 @@ describe 'Day counter' do
     expect(day_counter).to eq(4560)
   end
 end
-

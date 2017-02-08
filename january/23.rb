@@ -29,4 +29,6 @@ describe 'Block User' do
     expect(user.name).to eq('Jordan')
     expect(user.email).to eq('test@test.com')
   end
+
 end
+

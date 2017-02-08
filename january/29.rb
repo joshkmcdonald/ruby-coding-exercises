@@ -1,6 +1,22 @@
+
 require 'rspec'
 
 class NullClass
+
+#done (null object pattern)
+require 'rspec'
+
+class NullClass
+  # built in ruby method that takes three arguments
+  # does not give respond_to? functionality
+  def method_missing(name, *args, &block)
+    self
+  end
+
+  def respond_to_missing?(name, include_private = false)
+    name.to_s || super
+  end
+
 end
 
 describe 'Null class' do

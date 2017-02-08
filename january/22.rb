@@ -47,3 +47,5 @@ describe 'Tip Generator' do
   end
 end
 
+p Tippy::Builder.new(total: 100, gratuity: '23.5').generate
+

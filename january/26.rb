@@ -18,6 +18,12 @@ def url_parser str
       )
     )
   }ix
+
+
+  str.gsub(regex) do |url|
+    "<a href='#{url}' target='_blank'>#{url}</a>"
+  end
+
 end
 
 describe 'URL Parser' do
@@ -31,4 +37,3 @@ describe 'URL Parser' do
     expect(url_parser str_three).to eq("<a href='https://devcamp.com' target='_blank'>https://devcamp.com</a> that starts at the beginning")
   end
 end
-

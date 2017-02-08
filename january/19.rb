@@ -1,4 +1,3 @@
-
 # done
 require 'rspec'
 

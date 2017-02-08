@@ -36,4 +36,6 @@ end
 #   iterate from current num
 #     nested element * current num and added to array
 #   add new key and array value to hash
+
 #   return final hash
+

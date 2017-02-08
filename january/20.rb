@@ -31,4 +31,3 @@ describe 'Collection search' do
     expect(books.value_included? 'Something Else').to eq(false)
   end
 end
-
