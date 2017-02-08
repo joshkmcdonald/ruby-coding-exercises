@@ -18,5 +18,6 @@ describe 'Tip Generator' do
     expect(test_6).to eq(120.0)
     expect(test_7).to eq(100.0)
   end
+
 end
 
