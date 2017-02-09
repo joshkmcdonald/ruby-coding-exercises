@@ -1,12 +1,3 @@
-
-require 'rspec'
-
-class ApiConnector
-  def send_data
-    begin
-      api_call
-    rescue Errno::ETIMEDOUT => e
-
 # done
 require 'rspec'
 

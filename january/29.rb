@@ -1,8 +1,3 @@
-
-require 'rspec'
-
-class NullClass
-
 #done (null object pattern)
 require 'rspec'
 

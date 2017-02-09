@@ -1,6 +1,3 @@
-require 'rspec'
-
-
 # done
 require 'rspec'
 

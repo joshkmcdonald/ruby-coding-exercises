@@ -1,9 +1,3 @@
-
-require 'rspec'
-
-def big_data_parser num
-  (1..num).map do |i|
-
 #done
 require 'rspec'
 
