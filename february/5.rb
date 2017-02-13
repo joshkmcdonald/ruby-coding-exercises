@@ -1,4 +1,20 @@
+# done
 require 'rspec'
+
+class Array
+
+  def index_hash
+    arr = self
+    arr_length = self.length
+    arr_hash = {}
+
+    arr_length.times do |x|
+      arr_hash[x]= arr[x]
+    end
+    arr_hash
+  end
+end
+
 
 describe 'Array to Hash converter' do
   it 'converts an array to a hash, with the keys being the index and the value being the element' do
