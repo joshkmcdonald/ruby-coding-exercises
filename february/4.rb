@@ -1,6 +1,15 @@
+# done
 require 'rspec'
+require 'csv'
+
 
 def csv_parser file_path
+  csv_arr = []
+
+  CSV.foreach(file_path) do |row|
+    csv_arr << row
+  end
+  csv_arr
 end
 
 describe 'CSV Parser' do
