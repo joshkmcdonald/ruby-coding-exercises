@@ -1,4 +1,9 @@
+# done
 require 'rspec'
+
+def cloned_cycle(arr, int)
+  arr.map { |x| x } * int
+end
 
 describe 'Cloned cycle' do
   it 'Iterates through an array a variable number of times and returns the full set of elements' do
