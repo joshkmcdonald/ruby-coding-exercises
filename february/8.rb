@@ -1,4 +1,12 @@
+# done
+
 require 'rspec'
+
+class Array
+  def remove_duplicates
+    self.uniq
+  end
+end
 
 describe 'Duplicate removal' do
   it 'Removed duplicates from an array' do
